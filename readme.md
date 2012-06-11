@@ -33,6 +33,9 @@ Please see notes/comments in the video-sitemap.php for more info.
 
 --------------
 
+## Notes
+
+Since this script, depending on your total public and domain restricted videos, can be quite resource intensive; it is recommended to only run it when  you need to and not on demand. IE: Once a day from a cronjob on your server.
 
 ## Support
 
