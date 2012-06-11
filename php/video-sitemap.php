@@ -8,8 +8,8 @@ class Video_Sitemap extends Viddler_V2 {
   public $sitemap_path    = NULL;
   public $stats           = array();
   
-  protected $max_per      = 1;
-  protected $per_page     = 1;
+  protected $max_per      = 50000;
+  protected $per_page     = 100;
   protected $password     = NULL;
   protected $sessionid    = NULL;
   protected $total_per    = 0;
