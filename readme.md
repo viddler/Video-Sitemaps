@@ -15,6 +15,7 @@ A simple way to create your own video sitemap files for your site.
 4. Update the example file with your Viddler API, username, password and path to save error logs (optional)
 5. Update the example file method call `create` to the correct path to the folder to save your sitemaps
 6. Run
+7. Add all the files created to your robots.txt file (Sitemap: http://YOURSITE.com/sitemaps/video-sitemap.xml)
 
 ##### Example
 
