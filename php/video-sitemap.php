@@ -140,27 +140,13 @@ class Video_Sitemap extends Viddler_V2 {
         if ($download === true) {
           $xml .= '<video:content_loc>' . $video['files'][1]['url'] . '</video:content_loc>';
         }
+        
         $xml .= '<video:player_loc allow_embed="' . $embed . '">http://www.viddler.com/embed/' . $video['id'] . '</video:player_loc>';
         $xml .= '<video:duration>' . $video['length'] . '</video:duration>';
         $xml .= '<video:view_count>' . $video['view_count'] . '</video:view_count>';
         $xml .= '<video:publication_date>' . date('Y-m-d', $video['upload_time']) . '</video:publication_date>';
         $xml .= '<video:family_friendly>yes</video:family_friendly>';
         $xml .= '<video:live>no</video:live>';
-        
-        //Get any global tags
-        $total_tags = 0;
-        if (isset($video['tags']) && count($video['tags']) > 0) {
-          foreach ($video['tags'] as $tag) {
-            if ($tag['type'] == 'global' && $total_tags != $max_tags) {
-              $xml .= '<video:tag>' . htmlspecialchars($tag['text'], ENT_QUOTES, 'UTF-8') . '</video:tag>';
-              $total_tags += 1;
-            }
-            elseif ($total_tags >= $max_tags) {
-              break;
-            }
-          }
-        }
-        
         $xml .= '</video:video>';
         $xml .= '</url>';
         $current += 1;
