@@ -32,6 +32,10 @@ This version will create multiple sitemaps if need be. There is a max of 50,000 
 
 Please see notes/comments in the video-sitemap.php for more info.
 
+### Ruby
+
+1. [https://github.com/viddler/video-sitemaps-ruby](https://github.com/viddler/video-sitemaps-ruby)
+
 --------------
 
 ## Notes
